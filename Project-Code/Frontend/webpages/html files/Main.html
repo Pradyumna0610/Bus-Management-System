@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+background-color:#cfe0e8;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+.row {margin: 0 5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 100px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.card {
+  background-color: transparent;
+  height: 400px;
+  perspective: 1000px;
+  border: solid 3px white;
+  border-radius:5px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: #87bdd8;
+  color: black;
+  
+}
+
+.card-back {
+  background-color:#667292;
+  color: white;
+  transform: rotateY(180deg);
+  cursor:pointer;
+  text-align:center;
+}
+img {
+  height:300px;
+  width:200px;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<a style="background-color:#87bdd8;
+  color:black;
+  padding: 6px;
+  border: solid 2px white; 
+  box-radius:4px;
+  text-align: center;" href="#" target="_blank">
+  Main Page
+</a><br><hr>
+<h3 align="center"> BUS MANAGEMENT SYSTEM</h3><hr><br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+     <div class="card-inner">
+     <div class="card-front">
+      <h3> ADD-BUS </h3>
+      <img src="C:\Users\Syed Yaser\Desktop\project\bus.jpg" height="100px">
+     </div>
+     <a href="file:///C:/Users/Syed%20Yaser/Desktop/BUS/webpages/busdetails.html" target="_blank">
+     <div class="card-back"><br><br><br><br><br><br>
+      <br><br><h2>Click to Add Bus</h2> 
+     </div></a>
+    </div>
+  </div>
+ </div>
+
+  <div class="column">
+    <div class="card">
+     <div class="card-inner">
+     <div class="card-front">
+      <h3>ADD-STATION</h3>
+      <img src="C:\Users\Syed Yaser\Desktop\project\bus stop.jpg">
+     </div>
+     <a href="file:///C:/Users/Syed%20Yaser/Desktop/project/Addstation.html" target="_blank">
+     <div class="card-back"><br><br><br><br><br><br>
+     <br><br><h2>Click to Add Station</h2>
+     </div></a>
+    </div>
+   </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+     <div class="card-inner">
+     <div class="card-front">
+      <h3>ADD-EMPLOYEE</h3>
+      <img src="C:\Users\Syed Yaser\Desktop\project\driver -2.png">
+     </div>
+     <a href="file:///C:/Users/Syed%20Yaser/Desktop/project/Emp.html" target="_blank">
+     <div class="card-back"><br><br><br><br><br><br>
+     <br><br><h2>Click to Add Employee</h2>
+     </div></a>
+    </div>
+   </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+     <div class="card-inner">
+     <div class="card-front">
+      <h3> BOOK-TICKETS </h3>
+      <img src="C:\Users\Syed Yaser\Desktop\project\tick.jpg">
+     </div>
+     <a href="file:///C:/Users/Syed%20Yaser/Desktop/project/ticket.html" target="_blank">
+     <div class="card-back"><br><br><br><br><br><br>
+     <br><br><h2>Click to Book Tickets</h2>
+     </div></a>
+    </div>
+   </div>
+  </div>
+
+</div>
+
+</body>
+</html>

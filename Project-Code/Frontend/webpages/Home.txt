@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <style>
+            *{
+               margin: 0;
+               padding:0;
+            }
+            header{
+                background-color:black;
+            }
+            footer{
+                background-color:black;
+            }
+            .middle{background-color: black;}
+            h1{
+                color:white;
+                font-size: 40px;
+                
+            }
+            .centered {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: aliceblue;
+            }
+            nav{
+                display: flex;
+                padding:2% 6%;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .nav-links{
+                 flex: 1;
+                 text-align: center;
+            }
+            .nav-links ul li{
+                display: inline-block;
+                padding: 5px 40px;
+                position: relative;
+            }
+            ul{
+                color:white;
+            }
+            a{
+                color:white;
+            }
+            a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+            a::after{
+                content: "";
+                height: 2px;
+                background:turquoise;
+                display:block;
+                margin:auto;
+                width:0%;
+                transition:1s;
+            }
+            a:hover::after{
+                width:100%;
+
+            }
+            .hero-btn{
+                display: inline-block;
+                text-decoration: none;
+                color:black;
+                border:1px solid black;
+                padding:12px 34px;
+                font-size:14px;
+                background:transparent;
+                position: relative;
+                cursor: pointer;
+            }
+            .dropbtn {
+                font-size: 16px;
+                background-color: unset;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color:black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display:block;
+            }
+            .dropdown:hover .dropdown-content {display: block;}
+            .container {
+                position: relative;
+                text-align: center;
+                color: black;
+            }
+            .form {
+                position:absolute;
+                top:195vh;
+                left:50%;
+                transform:translate(-50%,-50%);
+                width:320px;
+                background:#f5f5f5;
+                box-shadow:5px 5px 10px 5px #ccc;
+            }
+            .form .tab-header {
+                height:50px;
+                line-height:50px;
+            }
+            .form .tab-header > div {
+                width:50%;
+                float:left;
+                text-align:center;
+                background:#ddd;
+                color:#555;
+                cursor:pointer;
+            }
+            .form .tab-header > div.active {
+                background:#f5f5f5;
+                color:#111;
+            }
+            .form .tab-content {
+                padding:20px;
+            }
+            .form .tab-content .form-element {
+                margin:10px 0px;
+            }
+            .form .tab-content .form-element input {
+                width:100%;
+                padding:10px;
+                padding-right: 5px;
+                border:1px solid #aaa;
+                font-size:16px;
+                background:#f5f5f5;
+                border-radius:5px;
+                outline:none;
+            }
+            .form .tab-content .form-element input[type="checkbox"] {
+                width:30px;
+                margin:8px 0px;
+                margin-left:-5px;
+            }
+            .form .tab-content .form-element label {
+                color:#111;
+            }
+            .form .tab-content .form-element button {
+                margin-top:5px;
+                width:100%;
+                padding:10px;
+                border:none;
+                outline:none;
+                background:black;
+                color:#f5f5f5;
+                font-size:16px;
+                text-transform:uppercase;
+                cursor:pointer;
+                border-radius:5px;
+            }
+            .form .tab-content > div.active {
+                display:block;
+            }
+            .form .tab-content > div {
+                display:none;
+            }
+            .fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+
+.right {
+  text-align: right;
+  
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+
+.bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+.card {
+   background-color: thistle;
+   padding: 20px;
+   margin-top: 20px;
+   color:black;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+        </style>
+        <header>
+            <nav>
+                <a href="m.html" target="_blank"><h1>GoRide OnBus</h1></a>
+                <div class="nav-links">
+                
+                    <ul>
+                        <li><a href="#register" target="_blank">Register</a></li> |
+                        <li><div class="dropdown">
+                         <div class="dropbtn">Social media</div>
+                         <div class="dropdown-content">
+                           <a href="#rating" >Rating</a>
+                           <a href="#blogs" >Blogs</a>
+                           <a href="#feedback" >feedback</a>
+                         </div>
+                       </div> </li>|
+                        <li><a href="#about" >About Us</a></li> |
+                        <li><a href="mailto: Gorideonbus@gmail.com">Contact Us</a></li> 
+                    </ul>  
+            </nav>
+        </header><br>   
+        <section class="middle"></section>
+                <div class="container">
+                    <img src="https://images.unsplash.com/photo-1494783367193-149034c05e8f?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cm9hZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="clothing" width="900px" height="500px">
+                    <div class="centered"> <h2>Online Bus Ticket Reservation </h2><br>
+                        <p>Reserve seats, cancellation of reservation and different types of route enquiries and with secured payment option<br><br>Safe and Happy Journey</p><br><br>
+                        <a href="hknowmore.html" target="_blank" class="hero-btn">know more</a>
+                    </div>
+                </div>
+            </section>   
+        <br><hr><br>
+
+        <!-----------works----->
+
+        <section class="About" id="about">
+            
+            <h5 style="text-align: center;">How it works</h5>
+            <h2 style="text-align: center;">About us</h2><br>
+            <p>
+                Bus management system is a web based application that works within a
+                centralized network.This project presents a review on the software program
+                “bus management system” as should be used in a bus transportation
+                system, a facility which is used to reserve seats, cancellation of reservation
+                and different types of route enquiries used on securing quick reservations
+                from the user end.it is used by the admin to edit the information of the
+                buses and the modify the data present in the website.
+                <br><br>
+                It is further development of the designed software, an additional
+                functionality such as the use of Email to send tickets and notifications to the
+                customer and an online payment using credit cards/debit cards should be
+                implemented into the system.online ticket booking system is available in
+                the website its primary objectives are: to spread comfort and hospitality
+                to passengers away from their home, to make profit, will definitely
+                appreciate a system which can automate its manual operations in the area
+                of bus ticket reservation in order to meet customers increasing demand
+                during peak and off peak seasons.
+            </p><br><hr><br>  
+        
+        </section>
+
+        
+        <!-----Signin&sign up-->
+
+        <h2 style="text-align: center;">Register</h2><br>
+        <section class="register" id="register"></section>
+        <div class="form">
+            <div class="tab-header">
+              <div class="active">Sign Up</div>
+              <div>Sign In</div>
+            </div>
+            <div class="tab-content">
+              <div class="tab-body active">
+                <div class="form-element">
+                    <input type="text" placeholder="Firstname">
+                  </div>
+                  <div class="form-element">
+                    <input type="text" placeholder="Lastname">
+                  </div>
+                <div class="form-element">
+                    <input type="text" placeholder="Username">
+                  </div>
+                <div class="form-element">
+                  <input type="text" placeholder="Email">
+                </div>
+                <div class="form-element">
+                  <input type="password" placeholder="Password">
+                </div>
+                <div class="form-element">
+                  <button>Sign Up</button>
+                </div>
+              </div>
+              
+              <div class="tab-body">
+                <div class="form-element">
+                  <input type="text" placeholder="Email / Username">
+                </div>
+                <div class="form-element">
+                  <input type="password" placeholder="Password">
+                </div>
+                <div class="form-element">
+                  <input type="checkbox" id="remember_me">
+                  <label for="remember_me">Remember me</label>
+                </div>
+                <div class="form-element">
+                  <button>Sign In</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script>
+        let tabPanes = document.getElementsByClassName("tab-header")[0].getElementsByTagName("div");
+ 
+ for(let i=0;i<tabPanes.length;i++){
+   tabPanes[i].addEventListener("click",function(){
+     document.getElementsByClassName("tab-header")[0].getElementsByClassName("active")[0].classList.remove("active");
+     tabPanes[i].classList.add("active");
+     
+     document.getElementsByClassName("tab-content")[0].getElementsByClassName("active")[0].classList.remove("active");
+     document.getElementsByClassName("tab-content")[0].getElementsByClassName("tab-body")[i].classList.add("active");
+   });
+ }
+  </script><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><hr><br>
+  
+  <!---Rating-->
+  
+  <section class="Rating" id="rating">
+      <h2 style="text-align: center;">Rating</h2><br>
+    <span class="heading">Your Rating</span><br><br>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span><br><br>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+  </section><br><br><hr><br>
+
+
+  <section class="Blogs" id="blogs"></section>
+  <h2 style="text-align: center;">Blogs</h2>
+  <div class="card">
+    <h2>My Travel History</h2>
+    <h5>Happy travel, Dec 6, 2020</h5><br>
+    <div class="img1" style="height:200px;"><img src="https://wwwnc.cdc.gov/travel/images/hiker-ocean-extreme.jpg" alt="img1" height="200px" width="200px"></div>
+    <br><p>Enjoyed travelling and explored places.</p><br>
+    <p>This blog is about empty roads in the jaipur. It's a first for me, I had no idea how beautiful jaipur palace . </p>
+  </div>
+  <div class="card">
+    <h2>My Tour</h2>
+    <h5>Happy place, Feb 2, 2021</h5><br>
+    <div class="img2" style="height:200px;"><img src="https://youmatter.world/app/uploads/sites/2/2019/11/travel-world.jpg" alt="img2" height="200px" width="200px"></div>
+    <br><p>Split the joy</p><br>
+    <p>Moment with the friends and memories in the travel.</p>
+  </div>
+</section><br><hr><br>
+<section class="feedback" id="feedback">
+    <h2 style="text-align: center;">Feedback</h2><br>
+<div class="container">
+    <form>
+      <label for="fname">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+  
+      <label for="lname">email</label>
+      <input type="text" id="lname" name="email" placeholder="Your email">
+  
+      <label for="subject">feedback</label>
+      <textarea id="subject" name="feedback" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</section>
+<footer>
+    <h2 style="text-align: center; color:white;">Contact us</h2>
+    <h4 style="color:white;">Quick links</h4><br>
+    <a href="mailto: Gorideonbus@gmail.com">Mail us</a>
+    <p style= color:white;>phone no.0088003842</p><br><br>
+</footer>
+    </body>
+</html>

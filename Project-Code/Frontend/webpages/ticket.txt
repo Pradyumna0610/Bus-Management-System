@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>Book Tickets</title>
+<style>
+<meta name "viewport" content="width=device-width, initial-scale=1">
+* {
+  box-sizing: border-box;
+}
+.column {
+ float: left;
+ width: 49%;
+ padding: 0 5px;
+}
+.row {margin: 0 -5px;}
+
+.row:after{
+ content: "";
+ display:table;
+ clear:both;
+}
+
+
+.container {
+ border-radius: 10px;
+ background-color:#87bdd8 ;
+ padding: 5px;
+ box-shadow: 8px 10px #8d9db6;
+ opacity:0.8;
+}
+
+.container:hover{
+opacity:1;
+}
+
+input[type=text],input[type=number],select,input[type=date] {
+ width:21%;
+ padding: 10px;
+ border: 1px solid black;
+ margin: 0 100px  15px 15px;
+ display: inline-block;
+}
+
+input[type=submit]{
+ background-color: #f9f9f9;
+ padding: 5px;
+ border-radius: 4px;
+ cursor:pointer;
+}
+
+input[type=submit]:hover {
+width:70px;
+height:40px;
+cursor:pointer;
+background-color:#cfe0e8;
+
+}
+button{
+height:30px;
+border-radius: 4px;
+background-color:#f5f5f5;
+}
+
+button:hover{
+width:120px;
+height:40px;
+cursor:pointer;
+background-color:#cfe0e8;
+
+}
+
+table{
+border: solid 1px black;
+border-collapse:collapse;
+}
+tr,th,td{
+border: 1px solid black;
+  text-align: left;
+  padding: 8px;}
+</style>
+</head>
+<body style="background-color:#cfe0e8">
+
+<a style="background-color:#87bdd8;
+  color:black;
+  padding: 6px;
+  border: solid 3px white; 
+  box-radius:4px;
+  text-align: center;" href="file:///C:/Users/Syed%20Yaser/Desktop/project/Mainpage.html" target="_blank">
+  Main Page
+</a><br><br>
+<div class="row">
+<div class="column">
+<div class="container">
+      <form style="padding:20px 40px" action="/BookTicket" method="POST" ">
+      <h3 align="center"><strong>Book Ticket<strong></h3><hr><br>
+    <label  for="From">From:</label>
+    <input type="text" id="From" name="From">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <label  for="To">To:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="To" name="To"><br><br><br>
+
+    <label for="Date">Date:</label>&nbsp;
+    <input type="date" id="Date" name="Date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <label  for="Bus_no">Bus No:</label>
+    <input type="number" id="Bus_no" name="BusNo"><br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label  for="Fare">Fare:</label>
+    <input type="number" id="Fare" name="Fare"><br>
+
+    <h4>Passenger Details</h4>
+    <label  for="Fname">Full Name:</label>
+    <input type="text" id="Fname" name="Fname">
+
+    <label  for="Age">Age:</label>
+    <input type="number" id="Age" name="Age"><br><br>
+   
+    Gender:&emsp;
+
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male">&emsp;&emsp;
+
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female">&emsp;&emsp;
+
+    <label for="other">Other</label>
+    <input type="radio" id="other" name="gender" value="other"><BR><br>
+  
+
+    <button type="button" onclick="alert('Option not yet available!')">Add Passenger</button>&emsp;   
+    <input type="submit" value="Submit">
+   </form>
+   <br>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="container"><br>
+      <h3 align="center"><strong>Search Ticket<strong></h3><hr>
+      <h3 align="center">Enter Ticket ID to search ticket</h3>
+      <form style="padding:20px 40px">
+      <label  for="Ticket_id">Ticket ID:</label>
+      <input type="number" id="Ticket_id" name="Ticket_id">
+      <input style="align:center" type="submit" value="Submit">
+      </form>
+      <h3 align="center">Ticket Details</h3><hr><br>
+      <table>
+       <tr>
+        <th> Ticket ID </th>
+        <th> Passenger Name</th>
+ 	<th> Age </th>
+ 	<th> Gender</th>
+ 	<th> Bus Number</th>
+ 	<th> Date</th>
+       </tr>
+       <tr>
+ 	<td></td><td></td><td></td><td></td><td></td><td></td>
+       <tr>
+      </table><br><br>
+      <table>
+       <tr>
+        <th> Driver Name</th>
+        <th> Driver Mobile</th>
+ 	<th> Conductor Name </th>
+ 	<th> Conductor Mobile</th>
+       </tr>
+       <tr>
+ 	<td></td><td></td><td></td><td></td>
+       <tr>
+      </table><hr><br><br><br><br><br><br><br>
+    </div>
+  </div>
+</div>
+</body>
+</html>

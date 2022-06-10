@@ -1,0 +1,100 @@
+<html>
+<head>
+<title> Employee details </title>
+<style>
+
+.container {
+ border-radius: 10px;
+ background-color: #87bdd8;
+ padding: 20px;
+ box-shadow: 8px 10px #8d9db6;
+ width:50%;
+ opacity:0.8;
+}
+
+.container:hover{
+opacity:1;
+}
+
+input[type=text],input[type=number],select,input[type=date] {
+ width:20%;
+ padding: 10px;
+ border: 1px solid black;
+ margin: 0 100px  15px 15px;
+ display: inline-block;
+}
+
+input[type=submit]{
+ background-color: #f9f9f9;
+ padding: 5px;
+ border-radius: 4px;
+ cursor:pointer;
+}
+
+input[type=submit]:hover {
+width:70px;
+height:40px;
+cursor:pointer;
+background-color:#cfe0e8;
+color:white;
+
+}
+button{
+height:30px;
+border-radius: 4px;
+background-color:#f5f5f5;
+}
+
+button:hover{
+width:120px;
+height:40px;
+cursor:pointer;
+background-color:rgb(155,155,155);
+color:white;
+
+}
+body{
+background-image:url(https://cdn.iconscout.com/icon/free/png-512/bus-driver-1529670-1293200.png);
+background-repeat:no-repeat;
+background-size:35% 39%;
+background-position: right;
+background-color:#cfe0e8;
+}
+</style>
+</head>
+<body>
+<a style="background-color:#87bdd8;
+  color:black;
+  padding: 6px;
+  border: solid 3px white; 
+  box-radius:4px;
+  text-align: center;" href="file:///C:/Users/Syed%20Yaser/Desktop/project/Mainpage.html" target="_blank">
+  Main Page
+</a><br><br>
+<div class="container">
+<h3 align="center">Employee Details</h3><hr>
+<form style="padding:20px 40px" action="/addEmp" method="POST"><b>
+<label  for="Emp_name">Employee Name:</label>&emsp;
+
+<input type="text" id="Emp_name" name="Emp_name"><br><br><br>
+
+<label for="Emp_id">Employee ID:</label>&emsp;&emsp;&nbsp;
+
+<input type="number" id="Emp_id" name="Emp_id"><br><br><br>
+
+<label for="Mobile">Employee Mobile:</label>&nbsp;
+
+<input type="number" id="Mobile" name="Mobile"><br><br><br>
+
+<label  for="Position">Position :</label>&emsp;&emsp;&emsp;&emsp;
+
+<select name="Position" id =Position"></b>
+<option value="Driver">Driver</option>
+<option value="Conductor">Conductor</option>
+</select><br><br>
+<br>
+<input type="submit" value="Submit">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Homepage
+        </title>
+    </head>
+    <body>
+        <style>
+       h2{
+            color:#fff;
+            text-align:center;
+       }
+       body{
+            min-height: 100vh;
+            width:100%;
+            background-position:center;
+            background-size: cover;
+            position: relative;
+            background-image: url("https://images.unsplash.com/photo-1547903299-5b30563a1f7e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHJvYWR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
+            
+            
+       }
+       li{
+           color:thistle;
+       }
+       h3{
+           color:tomato;
+       }
+       p{
+           color:#fff;
+       }
+       </style>
+       <h2>Online Bus Ticket Booking</h2>
+       <h3>Bus Management system</h3>
+       <p>Bus management system is a web based application that works within a
+        centralized network.This project presents a review on the software program
+        “bus management system” as should be used in a bus transportation
+        system, a facility which is used to reserve seats, cancellation of reservation
+        and different types of route enquiries used on securing quick reservations
+        from the user end.it is used by the admin to edit the information of the
+        buses and the modify the data present in the website.</p><br><br>
+       <p>Online Bus Ticket Reservation System enables the customer to
+        buy bus ticket, make payment, and ask for information online easily
+        Enabling customers to check the availability and types of busses online.
+        Customers can check the time departure through the system,Easing
+        bus ticket payment by obtaining a bank pin after payments are made to the
+        various designated banks and Ability of customers to cancel their
+        reservation.for Admin user privileges in updating and canceling payment,
+        route and vehicle.</p><br><br>
+       <p>It is further development of the designed software, an additional
+        functionality such as the use of Email to send tickets and notifications to the
+        customer and an online payment using credit cards/debit cards should be
+        implemented into the system.online ticket booking system is available in
+        the website its primary objectives are: to spread comfort and hospitality
+        to passengers away from their home, to make profit, will definitely
+        appreciate a system which can automate its manual operations in the area
+        of bus ticket reservation in order to meet customers increasing demand
+        during peak and off peak seasons.
+        </p><br><br>
+        <p>Process To Book Ticket</p>
+        <ul>
+            <li>Register</li>
+            <li>Login</li>
+            <li>Book Ticket</li>
+            <li>HaVe A sAfE & HaPpY JoRnEy</li>
+        </ul>
+    </body>
+</html>

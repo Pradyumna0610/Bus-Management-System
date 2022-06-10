@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Bus Details
+        </title>
+    </head>
+    <body>
+        <style>
+            
+            h2{
+                color:black;
+                text-align: center;
+            }
+            body{
+                  background-image: url("https://img5.goodfon.com/wallpaper/nbig/b/c4/temsa-maraton-coach-bus-1.jpg");
+                  min-height: 100vh;
+                  width:100%;
+                  background-position: center;
+                  background-size: cover;
+                  position: relative;
+           }
+           .Addbus{  
+                   width: 382px;  
+                   overflow: hidden;  
+                   margin: auto;  
+                   margin: 20 0 0 450px;  
+                   padding: 80px;  
+                   background-color:#6abadeba;  
+                   border-radius: 15px ;   
+           }
+           
+        </style>
+        <h2 class="red-text" style="text-align: center">Bus Details</h2>
+        <div class="Addbus">    
+            <form id="Details" action="/addBus" method="POST" >    
+                <label><b>Bus name</b></label>    
+                <input type="text" name="Bname" id="Bname" placeholder="Bus name">    
+                <br><br>    
+                <label><b>Bus number</b></label>
+                <input type="text" name="Bno" id="Bno" placeholder="Bus number">    
+                <br><br>  
+                <label><b>Number of seats</b></label> 
+                <input type="text" name="seats" id="seats" placeholder="number of seats">    
+                <br><br>  
+                <label><b>Fare</b></label>
+                <input type="text" name="Fare" id="Fare" placeholder="Fare">    
+                <br><br>
+                <label><b>Source</b></label> 
+                <input type="text" name="Source" id="Source" placeholder="Source">    
+                <br><br>
+                <label><b>Destination</b></label> 
+                <input type="text" name="Destination" id="Destination" placeholder="Destination">    
+                <br><br>
+                <label><b>Driver</b></label> 
+                <input type="text" name="Driver" id="Driver" placeholder="Driver name">    
+                <br><br>       
+                <input type="submit">
+                    
+            </form>     
+        </div>
+    </body>
+</html>
